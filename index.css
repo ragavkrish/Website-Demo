@@ -49,6 +49,12 @@ nav {
 
 }
 
+nav img { 
+    width: 150px;
+   height: auto;
+}
+
+
 .links-container { 
     height: 100%;
     width: 100%;
@@ -404,6 +410,12 @@ nav svg {
     transition: 0.3s ease-in-out;
 }
 
+.footer-logo img { 
+    width: 150px;
+    height: auto;
+}
+
+
 .footer-bottom { 
     font-size: 0.8rem;
     margin-top: 20px;
@@ -458,11 +470,15 @@ nav svg {
     transform: scale(1.05);
 }
 
-
-/* .event-schedule hr { 
+.event-schedule hr { 
     border: none;
-    border-top: 2px dashed var(--accent-color);
-} */
+    height: 2px;
+    background-color: var(--accent-color);
+    width: 80%;
+    margin: 30px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 
 
 @media (max-width: 768px) {
