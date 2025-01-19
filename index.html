@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animated navbar</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <script>
+        // Set the countdown target date
+        var countDownDate = new Date("Feb 20, 2025 15:00:00").getTime();
+
+        // Set up the interval to execute every second
+        var x = setInterval(function () {
+            // Get the current date and time
+            var now = new Date().getTime();
+
+            // Calculate the time difference
+            var distance = countDownDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Update the countdown display
+            document.getElementById("countdown").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            // If the countdown is finished
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EVENT STARTED!";
+            }
+        }, 1000);
+    </script>
+
+    <nav >
+        <img src="logo.jpg" alt="">
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+        </label>
+        <label for="sidebar-active" id="overlay"></label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </label>
+            <a href="#" class="home-link">Home</a>
+            <a href="#">About</a>
+            <a href="#">Products</a>
+            <a href="#">Blog</a>
+            <a href="#">Login</a>
+
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="content">
+            <h1>Welcome to the Future Innovators Conference 2025</h1>
+            <p>
+                Join us for an exciting event where tech enthusiasts, industry leaders, and innovators gather to shape the
+                future. Don’t miss your chance to network, learn, and be inspired by the brightest minds in technology and
+                business.
+            </p>
+            <button class="cta-button">Get Your Tickets</button>
+        </div>
+    </section>
+
+
+    <section class="event-description">
+        <h2>About the Future Innovators Conference</h2>
+        <p>
+            The <strong>Future Innovators Conference</strong> is a premier event where industry leaders, tech enthusiasts,
+            and innovators gather to explore the future of technology, entrepreneurship, and creativity. This year, we're
+            bringing together visionaries who will share their insights, ideas, and projects that are shaping the world of
+            tomorrow.
+        </p>
+        <p>
+            Whether you're passionate about artificial intelligence, the future of work, sustainable innovation, or digital
+            transformation, this event offers a unique opportunity to learn from experts and network with like-minded
+            individuals. With keynote speakers, interactive workshops, and panel discussions, you'll walk away inspired and
+            ready to take on the future.
+        </p>
+        <p>
+            Don't miss out on this one-of-a-kind event that promises to ignite your creativity and help you stay ahead in an
+            ever-changing world. Mark your calendars for the <strong>Future Innovators Conference 2025</strong>!
+        </p>
+    </section>
+
+    <section class="event-schedule">
+        <h2>Event Schedule</h2>
+        <div class="schedule-item">
+            <h3>Day 1: February 20, 2025</h3>
+            <p>10:00 AM - Keynote Speech: "The Future of AI"</p>
+            <p>2:00 PM - Workshop: "Building Sustainable Systems"</p>
+            <p>4:00 PM - Panel Discussion: "Tech Innovation in 2025"</p>
+        </div>
+        <div class="schedule-item">
+            <h3>Day 2: February 21, 2025</h3>
+            <p>10:00 AM - Fireside Chat: "Navigating Digital Transformation"</p>
+            <p>1:00 PM - Networking Lunch</p>
+            <p>3:00 PM - Closing Keynote: "The Road Ahead for Entrepreneurs"</p>
+        </div>
+    </section>
+
+ <div id="countdown">
+
+ </div>
+
+<section class="testimonials">
+    <h2>What People Are Saying</h2>
+
+    <div class="testimonial-card">
+        <p>"This event was amazing! The speakers were fantastic, and the organization was top-notch. Can't wait for the
+            next one!"</p>
+        <cite>- John Doe, Previous Attendee</cite>
+    </div>
+
+    <div class="testimonial-card">
+        <p>"One of the best experiences I've had at an event. The atmosphere was incredible, and I learned so much.
+            Highly recommend!"</p>
+        <cite>- Jane Smith, Past Attendee</cite>
+    </div>
+
+    <div class="testimonial-card">
+        <p>"I had an incredible time! The event exceeded my expectations. The networking opportunities were invaluable!"
+        </p>
+        <cite>- Mark Lee, Past Speaker</cite>
+    </div>
+
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="logo.jpg" alt="Logo" />
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="./5296499_fb_facebook_facebook logo_icon.png" alt="Facebook" /></a>
+            <a href="#"><img src="./5296514_bird_tweet_twitter_twitter logo_icon.png" alt="Twitter" /></a>
+            <a href="#"><img src="./5296501_linkedin_network_linkedin logo_icon.png" alt="LinkedIn" /></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Future Innovators Conference. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+</body>
+</html>
