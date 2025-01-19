@@ -50,8 +50,8 @@ nav {
 }
 
 nav img { 
-    width: 120px;
-   height: auto;
+    max-width: 120px;
+    height: auto;
 }
 
 
@@ -411,7 +411,7 @@ nav svg {
 }
 
 .footer-logo img { 
-    width: 150px;
+    max-width: 150px;
     height: auto;
 }
 
