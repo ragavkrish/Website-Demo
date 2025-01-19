@@ -398,6 +398,44 @@ nav svg {
     
 }
 
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-logo img {
+        max-width: 100px; /* making logo responsive on smaller screens dont change more */
+    }
+
+    .footer-links, .footer-social {
+        gap: 10px;
+    }
+
+    .footer-bottom {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo img {
+        max-width: 80px; 
+    }
+
+    .footer-links, .footer-social {
+        gap: 5px;
+    }
+
+    .footer-bottom {
+        font-size: 0.9rem;
+    }
+
+    .footer-links a, .footer-social a {
+        font-size: 0.8rem; 
+    }
+}
+
 .footer-logo {
     display: flex;
     justify-content: center; /* Center the logo */
